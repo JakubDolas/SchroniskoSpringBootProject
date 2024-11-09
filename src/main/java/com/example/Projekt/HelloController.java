@@ -66,8 +66,11 @@ public class HelloController {
 
         Locale locale = new Locale(lang);
         localeResolver.setLocale(request, response, locale);
-        return "redirect:/";
+
+        // Odczytujemy poprzedni URL z nagłówka "Referer"
+        String referer = request.getHeader("Referer");
+        return "redirect:" + (referer != null ? referer : "/");
     }
+
 }
-//ddddddd
 

@@ -120,7 +120,7 @@ body {
 .home-photo img {
     border-radius: 10px;
     outline: 0;
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 .paw image img {
@@ -139,7 +139,7 @@ body {
 .adopt-text {
     flex: 1; /* Umożliwia tekstowi zajęcie jednej części kontenera */
     text-align: left;
-    padding-left: 30px;
+    padding-left: 0;
 }
 
 .adopt-text h1 {
@@ -147,7 +147,6 @@ body {
     color: #423c3c;
     line-height: 1.2;
     margin-top: 60px;
-    margin-right: 80px;
 
 }
 
@@ -231,4 +230,61 @@ body {
         max-width: 100px;
     }
 }
+
+/* Style dla About Page */
+
+/* Style sekcji "O nas" */
+/* Style sekcji tytułowej */
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1000px;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.box2 {
+    flex: 1;
+    padding: 20px;
+}
+
+.box2 h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.box2 p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
 
