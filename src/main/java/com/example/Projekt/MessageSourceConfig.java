@@ -13,7 +13,7 @@ import java.util.Locale;
 @Configuration
 public class MessageSourceConfig implements WebMvcConfigurer {
 
-    // Konfiguracja LocaleResolver - ustawienie domyślnego języka
+    //ustawienie domyślnego języka
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver slr = new SessionLocaleResolver();
@@ -21,15 +21,13 @@ public class MessageSourceConfig implements WebMvcConfigurer {
         return slr;
     }
 
-    // Konfiguracja LocaleChangeInterceptor
     @Bean
     public LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
-        interceptor.setParamName("lang"); // Parametr w URL zmieniający język (np. lang=pl)
+        interceptor.setParamName("lang");
         return interceptor;
     }
 
-    // Rejestracja interceptora w aplikacji
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
