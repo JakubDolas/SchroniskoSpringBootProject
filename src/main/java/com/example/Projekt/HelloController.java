@@ -58,7 +58,6 @@ public class HelloController {
         return "login";
     }
 
-
     @GetMapping("/lang")
     public String changeLanguage(@RequestParam("lang") String lang, HttpServletRequest request, HttpServletResponse response) {
         if (lang == null || lang.isEmpty()) {
