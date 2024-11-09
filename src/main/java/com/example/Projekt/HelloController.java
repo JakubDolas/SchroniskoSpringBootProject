@@ -63,6 +63,7 @@ public class HelloController {
         if (lang == null || lang.isEmpty()) {
             lang = "pl";
         }
+
         Locale locale = new Locale(lang);
         localeResolver.setLocale(request, response, locale);
         return "redirect:/";
