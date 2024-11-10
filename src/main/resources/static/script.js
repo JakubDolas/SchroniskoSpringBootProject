@@ -13,3 +13,22 @@ function setActiveLink() {
 
 window.addEventListener('hashchange', setActiveLink); // Ustawienie aktywnego linku przy zmianie hasha
 window.addEventListener('DOMContentLoaded', setActiveLink); // Ustawienie aktywnego linku przy załadowaniu strony
+
+
+//Skrypty dla strony Log in
+const signUpButton=document.getElementById('signUpButton');
+const signInButton=document.getElementById('signInButton');
+const signInForm=document.getElementById('signIn');
+const signUpForm=document.getElementById('signup');
+
+signUpButton.addEventListener('click', function() {
+    signInForm.style.display = "none";
+    signUpForm.style.display = "block";
+    console.log("SignUp form is now visible.");
+});
+
+signInButton.addEventListener('click', function() {
+    signInForm.style.display = "block";
+    signUpForm.style.display = "none";
+    console.log("SignIn form is now visible.");
+});
