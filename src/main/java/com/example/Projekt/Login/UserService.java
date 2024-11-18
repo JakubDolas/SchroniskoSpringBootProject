@@ -1,8 +1,6 @@
-package com.example.Projekt;
+package com.example.Projekt.Login;
 
 
-import com.example.Projekt.User;
-import com.example.Projekt.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
