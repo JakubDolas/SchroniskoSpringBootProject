@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5efed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #423c3c;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+    color: #b77952;
+}
+
+.navbar .donate {
+    background-color: #b77952;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.navbar .donate-text {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .donate:hover {
+    background-color: #653b17;
+}
+
+.language-switcher .lang-button {
+    padding: 5px 10px;
+    background: #e1e1e1;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.language-switcher .lang-button:hover {
+    background: #ccc;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-row .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-submit {
+    background: #b77952;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #653b17;
+}
+
+.btn-cancel {
+    text-decoration: none;
+    color: #b77952;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #b77952;
+}
+
+.btn-cancel:hover {
+    background: #b77952;
+    color: white;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.alert-success .btn-close {
+    background: transparent;
+    border: none;
+    font-size: 1.25em;
+    color: #155724;
+    cursor: pointer;
+}

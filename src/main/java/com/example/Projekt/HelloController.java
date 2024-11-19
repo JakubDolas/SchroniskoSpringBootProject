@@ -55,7 +55,7 @@ public class HelloController {
 
     @GetMapping("/login")
     public String loginPage() {
-        return "login";
+        return "register";
     }
 
     @GetMapping("/lang")
@@ -67,7 +67,6 @@ public class HelloController {
         Locale locale = new Locale(lang);
         localeResolver.setLocale(request, response, locale);
 
-        // Odczytujemy poprzedni URL z nagłówka "Referer"
         String referer = request.getHeader("Referer");
         return "redirect:" + (referer != null ? referer : "/");
     }
