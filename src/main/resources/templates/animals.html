@@ -12,7 +12,7 @@
             <a th:href="@{/home}" id="homeLink" th:text="#{home}">Home</a>
             <a th:href="@{/about}" id="aboutLink" th:text="#{about}">About</a>
             <a th:href="@{/adopt}" id="adoptLink" th:text="#{adopt}">Adopt</a>
-            <a th:href="@{/contact}" id="contactLink" th:text="#{contact}">Contact</a>
+            <a th:href="@{/animals}" id="animalsLink" th:text="#{animals}">Animals</a>
 
             <div class="dupa">
                 <a th:href="@{/donate}" class="dupa-text" th:text="#{donate}">Donate</a>
@@ -26,6 +26,13 @@
             </div>
         </div>
 
+    </div>
+    <div class="containerAnimals">
+        <div class="animal-grid">
+            <div th:each="animal : ${animals}" class="animal-card">
+                <h3 th:text="${animal.name}">Animal Name</h3>
+            </div>
+        </div>
     </div>
 </div>
 <script src="/script.js"></script>

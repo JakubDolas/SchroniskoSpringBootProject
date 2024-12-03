@@ -43,10 +43,7 @@ public class HelloController {
         return "adopt";
     }
 
-    @GetMapping("/contact")
-    public String contactPage() {
-        return "contact";
-    }
+
 
     @GetMapping("/donate")
     public String donatePage() {

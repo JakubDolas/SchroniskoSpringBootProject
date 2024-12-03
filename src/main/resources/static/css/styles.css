@@ -310,3 +310,27 @@ body {
     font-weight: bold;
 }
 /* Styl dla strony "Login" */
+
+
+
+/*styl dla strony animals*/
+.containerAnimals {
+    margin-top: 20px;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
+    gap: 20px; /* Odstępy między elementami */
+    width: 100%;
+    max-width: 1200px;
+}
+
+.animal-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
