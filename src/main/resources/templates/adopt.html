@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/adoptStyles.css">
 </head>
 <body>
 <div class="container">
@@ -27,24 +27,32 @@
         </div>
     </div>
 
-    <form th:action="@{/send-email}" method="post">
-        <label for="to">Adres e-mail:</label>
-        <input type="email" id="to" name="to" required>
-        <br>
-        <label for="subject">Temat:</label>
-        <input type="text" id="subject" name="subject" required>
-        <br>
-        <label for="text">Treść wiadomości:</label>
-        <textarea id="text" name="text" required></textarea>
-        <br>
-        <button type="submit">Wyślij</button>
-    </form>
+    <div class="email-form-container">
+        <h1>Wniosek o adopcję</h1>
+        <form th:action="@{/send-email}" method="post" class="email-form">
+            <label for="firstName">Imię:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Wprowadź swoje imię" required>
 
-    <!-- Komunikat o sukcesie lub błędzie -->
-    <p th:if="${success}" th:text="${success}"></p>
-    <p th:if="${error}" th:text="${error}"></p>
+            <label for="lastName">Nazwisko:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Wprowadź swoje nazwisko" required>
+
+            <label for="userEmail">Twój e-mail:</label>
+            <input type="email" id="userEmail" name="userEmail" placeholder="Wprowadź swój e-mail" required>
+
+            <label for="dogName">Imię psa:</label>
+            <input type="text" id="dogName" name="dogName" placeholder="Wprowadź imię psa, którego chcesz adoptować" required>
+
+            <label for="text">Dlaczego chcesz adoptować?</label>
+            <textarea id="text" name="text" placeholder="Wpisz treść wiadomości" rows="5" required></textarea>
+
+            <button type="submit">Wyślij</button>
+        </form>
+
+        <p th:if="${success}" th:text="${success}" class="success-message"></p>
+        <p th:if="${error}" th:text="${error}" class="error-message"></p>
+    </div>
+
 </div>
 
-<script src="/script.js"></script>
 </body>
 </html>

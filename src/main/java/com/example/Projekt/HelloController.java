@@ -38,7 +38,7 @@ public class HelloController {
         return "about";
     }
 
-    @GetMapping("/adopt")
+    @GetMapping("/adopt-page")
     public String adoptPage() {
         return "adopt";
     }

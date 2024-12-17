@@ -2,7 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/stylesAnimals.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Animal</title>
+    <link rel="stylesheet" href="/css/stylesAddAnimal.css">
 </head>
 <body>
 <div class="container">
@@ -25,22 +27,25 @@
                 <a th:href="@{/lang?lang=en}" th:text="#{lang.en}">EN</a>
             </div>
         </div>
-
     </div>
     <div class="container2">
-        <div class="button-group">
-            <a href="/addAnimal" class="add-animal-btn">Add New Animal</a>
-            <a href="/deleteAnimal" class="delete-animal-btn">Delete Animal</a>
-        </div>
-        <div class="animal-grid">
-            <div th:each="animal : ${animals}" class="animal-card">
-                <img th:src="@{'/photos/' + ${animal.photo.id}}" alt="Animal Photo" class="animal-photo">
-                <h3 th:text="${animal.name}">Animal Name</h3>
-            </div>
+        <div class="form-container">
+            <h2>Add Animal</h2>
+            <form th:action="@{/addAnimal}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter animal name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+
+                <button type="submit" class="btn-submit">Add Animal</button>
+            </form>
         </div>
     </div>
-
 </div>
-<script src="/script.js"></script>
 </body>
 </html>

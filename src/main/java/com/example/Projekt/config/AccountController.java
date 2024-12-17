@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Date;
-import org.springframework.beans.factory.annotation.Autowired; // Add this import
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Controller
 public class AccountController {
-    @Autowired  // Add this annotation
-    private AppUserRepository repo;  // Inject the repository
+    @Autowired
+    private AppUserRepository repo;
 
     @GetMapping("/register")
     public String register(Model model) {

@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5efed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.navbar h1 {
+    color: #423c3c;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 0;
+}
+
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex: 1;
+    font-size: 0.8vw;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 650;
+    line-height: 40px;
+}
+
+.navbar .nav-links a:hover {
+    color: #b77952;
+}
+.navbar span{
+    color: #b77952;
+}
+.language-switcher {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.lang-button {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.lang-button:hover {
+    background-color: #ddd;
+}
+
+.dupa {
+    border-radius: 10px;
+    background: #b77952;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.dupa:hover {
+    background: #653b17;
+    color: white;
+}
+
+.navbar .nav-links .dupa a {
+    color: white;
+}
+
+.login {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Title styling */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Input styling */
+input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for inputs */
+input[type="text"]:focus, input[type="file"]:focus {
+    border-color: #4caf50;
+}
+
+/* Submit button styling */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        width: 100%;
+    }
+}

@@ -1,6 +1,5 @@
 package com.example.Projekt.AnimalsConfig;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +7,7 @@ import java.util.List;
 
 @Service
 public class AnimalService {
+
     @Autowired
     private AnimalRepository animalRepository;
 
@@ -15,7 +15,7 @@ public class AnimalService {
         return animalRepository.findAll();
     }
 
-    public void addAnimal(String name) {
-        animalRepository.save(new Animal(name));
+    public void saveAnimal(Animal animal) {
+        animalRepository.save(animal);
     }
 }

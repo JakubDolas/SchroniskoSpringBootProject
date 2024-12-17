@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5efed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.navbar h1 {
+    color: #423c3c;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 0;
+}
+
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex: 1;
+    font-size: 0.8vw;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 650;
+    line-height: 40px;
+}
+
+.navbar .nav-links a:hover {
+    color: #b77952;
+}
+.navbar span{
+    color: #b77952;
+}
+.language-switcher {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.lang-button {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.lang-button:hover {
+    background-color: #ddd;
+}
+
+.dupa {
+    border-radius: 10px;
+    background: #b77952;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.dupa:hover {
+    background: #653b17;
+    color: white;
+}
+
+.navbar .nav-links .dupa a {
+    color: white;
+}
+
+.login {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.active {
+    border-bottom: 2px solid #b77952;
+}
+/* Kontener dla przycisków */
+.button-group {
+    display: flex;
+    gap: 20px; /* Odstęp między przyciskami */
+    margin-bottom: 30px; /* Odstęp od innych elementów */
+    flex-wrap: wrap; /* Umożliwia zawijanie przycisków na mniejszych ekranach */
+    /*justify-content: center; Wyrównuje przyciski na środku */
+}
+
+/* Przyciski */
+.add-animal-btn, .delete-animal-btn {
+    background-color: #b77952;
+    color: white;
+    padding: 12px 24px; /* Zmniejszenie paddingu */
+    font-size: 1rem; /* Zmniejszenie czcionki */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Aby przyciski były w jednej linii */
+}
+
+.add-animal-btn:hover, .delete-animal-btn:hover {
+    background-color: #653b17;
+    transform: scale(1.05);
+}
+
+/* Responsywność: zmniejszenie rozmiaru przycisków na małych ekranach */
+@media (max-width: 768px) {
+    .add-animal-btn, .delete-animal-btn {
+        padding: 10px 20px; /* Jeszcze mniejszy padding */
+        font-size: 0.9rem; /* Zmniejszenie czcionki na małych ekranach */
+    }
+
+    .button-group {
+        gap: 15px; /* Zmniejszenie odstępu między przyciskami na mniejszych ekranach */
+    }
+}
+
+@media (max-width: 480px) {
+    .add-animal-btn, .delete-animal-btn {
+        padding: 8px 16px; /* Mniejsze przyciski na bardzo małych ekranach */
+        font-size: 0.8rem; /* Dodatkowe zmniejszenie czcionki */
+    }
+}
+
+/* Stylizacja dla siatki zwierząt */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
+    gap: 20px; /* Odstępy między elementami */
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px; /* Dodanie marginesu od góry */
+}
+
+/* Pozostałe style */
+.animal-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Zaokrąglony rogami */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px); /* Efekt unoszenia karty przy najechaniu */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Mocniejszy cień przy hover */
+}
+
+.animal-photo {
+    width: 100%; /* Dopasowanie do szerokości karty */
+    height: 300px; /* Wysokość zdjęcia */
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    margin-bottom: 15px;
+}
+
+.animal-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
