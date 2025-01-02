@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/stylesAnimals.css">
+    <title th:text="${animal.name}">Animal Details</title>
+    <link rel="stylesheet" href="/css/animalDetails.css">
 </head>
 <body>
 <div class="container">
@@ -28,31 +29,14 @@
     </div>
 
     <div class="container2">
-        <div class="animal-grid">
-            <div th:each="animal : ${animalsPage.content}" class="animal-card">
-                <a th:href="@{/animals/{id}(id=${animal.id})}">
-                    <img th:src="@{'/photos/' + ${animal.photo.id}}" alt="Animal Photo" class="animal-photo">
-                    <h3 th:text="${animal.name}">Animal Name</h3>
-                </a>
-            </div>
-        </div>
-
-
-        <div class="pagination">
-            <a th:if="${animalsPage.hasPrevious()}"
-               th:href="@{/animals(page=${animalsPage.number - 1}, size=${animalsPage.size})}"
-               th:text="#{pagination.previous}">Previous</a>
-
-            <span th:text="${animalsPage.number + 1}">1</span> /
-            <span th:text="#{pagination.total} + ' ' + ${animalsPage.totalPages}">Total</span>
-
-            <a th:if="${animalsPage.hasNext()}"
-               th:href="@{/animals(page=${animalsPage.number + 1}, size=${animalsPage.size})}"
-               th:text="#{pagination.next}">Next</a>
-        </div>
-
+        <h1 th:text="${animal.name}">Animal Name</h1>
+        <img th:src="@{'/photos/' + ${animal.photo.id}}" alt="Animal Photo" />
+        <p>
+            <strong th:text="#{animal.descriptionLabel}">Description:</strong>
+            <span th:text="${animal.description}"></span>
+        </p>
+        <a th:href="@{/animals}" class="back-button" th:text="#{animals.backToAnimals}">Back to Animals</a>
     </div>
 </div>
-<script src="/script.js"></script>
 </body>
 </html>

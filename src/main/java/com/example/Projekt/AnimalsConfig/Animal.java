@@ -8,8 +8,8 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
+    private String description;
 
     @OneToOne(cascade = CascadeType.ALL)  // Relacja jeden-do-jednego z Photo
     @JoinColumn(name = "photo_id") // Kolumna, która będzie przechowywać odniesienie do zdjęcia
@@ -17,8 +17,9 @@ public class Animal {
 
     public Animal() {}
 
-    public Animal(String name, Photo photo) {
+    public Animal(String name, String description, Photo photo) {
         this.name = name;
+        this.description = description;
         this.photo = photo;
     }
 
@@ -45,5 +46,12 @@ public class Animal {
 
     public void setPhoto(Photo photo) {
         this.photo = photo;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -104,51 +104,6 @@ body {
 .active {
     border-bottom: 2px solid #b77952;
 }
-/* Kontener dla przycisków */
-.button-group {
-    display: flex;
-    gap: 20px; /* Odstęp między przyciskami */
-    margin-bottom: 30px; /* Odstęp od innych elementów */
-    flex-wrap: wrap; /* Umożliwia zawijanie przycisków na mniejszych ekranach */
-    /*justify-content: center; Wyrównuje przyciski na środku */
-}
-
-/* Przyciski */
-.add-animal-btn, .delete-animal-btn {
-    background-color: #b77952;
-    color: white;
-    padding: 12px 24px; /* Zmniejszenie paddingu */
-    font-size: 1rem; /* Zmniejszenie czcionki */
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block; /* Aby przyciski były w jednej linii */
-}
-
-.add-animal-btn:hover, .delete-animal-btn:hover {
-    background-color: #653b17;
-    transform: scale(1.05);
-}
-
-/* Responsywność: zmniejszenie rozmiaru przycisków na małych ekranach */
-@media (max-width: 768px) {
-    .add-animal-btn, .delete-animal-btn {
-        padding: 10px 20px; /* Jeszcze mniejszy padding */
-        font-size: 0.9rem; /* Zmniejszenie czcionki na małych ekranach */
-    }
-
-    .button-group {
-        gap: 15px; /* Zmniejszenie odstępu między przyciskami na mniejszych ekranach */
-    }
-}
-
-@media (max-width: 480px) {
-    .add-animal-btn, .delete-animal-btn {
-        padding: 8px 16px; /* Mniejsze przyciski na bardzo małych ekranach */
-        font-size: 0.8rem; /* Dodatkowe zmniejszenie czcionki */
-    }
-}
 
 /* Stylizacja dla siatki zwierząt */
 .animal-grid {
@@ -189,4 +144,54 @@ body {
     color: #333;
     margin-top: 10px;
 }
+.pagination {
+    display: flex;               /* Układ Flexbox */
+    justify-content: center;     /* Wyśrodkowanie na poziomie osi X */
+    align-items: center;         /* Wyśrodkowanie na osi Y */
+    margin: 20px 0;              /* Odstęp od góry i dołu */
+    font-family: Arial, sans-serif;
+}
 
+/* Styl dla linków paginacji */
+.pagination a {
+    text-decoration: none;       /* Usunięcie podkreślenia */
+    background-color: #f4f4f4;   /* Jasnoszare tło */
+    color: #333;                 /* Ciemnoszary tekst */
+    padding: 8px 12px;           /* Wewnętrzny padding */
+    margin: 0 5px;               /* Odstępy między elementami */
+    border: 1px solid #ddd;      /* Obramowanie */
+    border-radius: 5px;          /* Zaokrąglenie rogów */
+    transition: background-color 0.3s; /* Efekt płynnej zmiany koloru */
+}
+
+/* Styl dla aktywnego numeru strony */
+.pagination span {
+    background-color: #b77952;   /* Niebieskie tło */
+    color: white;                /* Biały tekst */
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Efekt hover dla linków paginacji */
+.pagination a:hover {
+    background-color: #653b17;   /* Niebieskie tło */
+    color: white;                /* Biały tekst */
+    border-color: #653b17;
+}
+
+/* Dostosowanie wyglądu dla przycisku Previous i Next */
+.pagination a[rel="prev"],
+.pagination a[rel="next"] {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Odstępy dla mobilnych urządzeń */
+@media screen and (max-width: 768px) {
+    .pagination a, .pagination span {
+        padding: 6px 8px;  /* Zmniejszenie paddingu */
+        margin: 0 3px;     /* Zmniejszenie odstępów */
+    }
+}

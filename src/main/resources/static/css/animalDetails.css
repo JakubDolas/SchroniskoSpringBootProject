@@ -1,3 +1,4 @@
+/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
 
 body {
     background: #f5efed;
+    font-size: 16px;
 }
 
 .container {
@@ -15,6 +17,7 @@ body {
     margin: 0 auto;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -27,9 +30,7 @@ body {
     font-size: 1.5vw;
     font-weight: bold;
     margin-right: 20px;
-    padding: 0;
 }
-
 
 .navbar .nav-links {
     display: flex;
@@ -49,9 +50,11 @@ body {
 .navbar .nav-links a:hover {
     color: #b77952;
 }
-.navbar span{
+
+.navbar span {
     color: #b77952;
 }
+
 .language-switcher {
     margin-left: auto;
     display: flex;
@@ -73,6 +76,7 @@ body {
     background-color: #ddd;
 }
 
+/* Button styles */
 .dupa {
     border-radius: 10px;
     background: #b77952;
@@ -93,6 +97,7 @@ body {
     color: white;
 }
 
+/* Login link */
 .login {
     padding: 10px 20px;
     cursor: pointer;
@@ -101,98 +106,64 @@ body {
     height: 40px;
 }
 
+.active {
+    border-bottom: 2px solid #b77952;
+}
+
+/* Container for animal details */
 .container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    max-width: 900px;
+    margin: 40px auto;
     padding: 20px;
-}
-
-/* Form container styling */
-.form-container {
     background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-/* Title styling */
-h2 {
+/* Heading for animal details */
+h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
     text-align: center;
-    color: #333;
     margin-bottom: 20px;
 }
 
-/* Form group styling */
-.form-group {
+/* Image of animal */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     margin-bottom: 20px;
 }
 
-/* Label styling */
-label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #555;
+/* Animal description */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+
+/* Back button */
+.back-button {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #4CAF50;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #4CAF50;
     border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    resize: vertical; /* Pozwoli na zmianę rozmiaru w pionie */
-    transition: border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Focus effect dla textarea */
-textarea:focus {
-    border-color: #4caf50;
-}
-
-/* Input styling */
-input[type="text"], input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-/* Focus effect for inputs */
-input[type="text"]:focus, input[type="file"]:focus {
-    border-color: #4caf50;
-}
-
-/* Submit button styling */
-.btn-submit {
-    width: 100%;
-    padding: 12px;
-    background-color: #4caf50;
+.back-button:hover {
+    background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-/* Button hover effect */
-.btn-submit:hover {
-    background-color: #45a049;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .form-container {
-        padding: 20px;
-        width: 100%;
-    }
+/* Title page */
+title {
+    font-size: 1.5em;
+    color: #4CAF50;
 }

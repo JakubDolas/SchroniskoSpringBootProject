@@ -28,24 +28,24 @@
     </div>
 
     <div class="email-form-container">
-        <h1>Wniosek o adopcję</h1>
+        <h1 th:text="#{adoptionFormTitle}">Wniosek o adopcję</h1>
         <form th:action="@{/send-email}" method="post" class="email-form">
-            <label for="firstName">Imię:</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Wprowadź swoje imię" required>
+            <label for="firstName" th:text="#{firstNameLabel}">Imię:</label>
+            <input type="text" id="firstName" name="firstName" th:placeholder="#{firstNamePlaceholder}" required>
 
-            <label for="lastName">Nazwisko:</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Wprowadź swoje nazwisko" required>
+            <label for="lastName" th:text="#{lastNameLabel}">Nazwisko:</label>
+            <input type="text" id="lastName" name="lastName" th:placeholder="#{lastNamePlaceholder}" required>
 
-            <label for="userEmail">Twój e-mail:</label>
-            <input type="email" id="userEmail" name="userEmail" placeholder="Wprowadź swój e-mail" required>
+            <label for="userEmail" th:text="#{emailLabel}">Twój e-mail:</label>
+            <input type="email" id="userEmail" name="userEmail" th:placeholder="#{emailPlaceholder}" required>
 
-            <label for="dogName">Imię psa:</label>
-            <input type="text" id="dogName" name="dogName" placeholder="Wprowadź imię psa, którego chcesz adoptować" required>
+            <label for="dogName" th:text="#{dogNameLabel}">Imię psa:</label>
+            <input type="text" id="dogName" name="dogName" th:placeholder="#{dogNamePlaceholder}" required>
 
-            <label for="text">Dlaczego chcesz adoptować?</label>
-            <textarea id="text" name="text" placeholder="Wpisz treść wiadomości" rows="5" required></textarea>
+            <label for="text" th:text="#{adoptionReasonLabel}">Dlaczego chcesz adoptować?</label>
+            <textarea id="text" name="text" th:placeholder="#{adoptionReasonPlaceholder}" rows="5" required></textarea>
 
-            <button type="submit">Wyślij</button>
+            <button type="submit" th:text="#{submitButton}">Wyślij</button>
         </form>
 
         <p th:if="${success}" th:text="${success}" class="success-message"></p>
