@@ -26,26 +26,25 @@
     </div>
     <div class="container2">
         <div class="form-container">
-            <h2>Dodaj Pracownika</h2>
+            <h2 th:text="#{addEmployeeFormTitle}">Dodaj Pracownika</h2>
             <form th:action="@{/addEmployee}" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="firstName">Imię:</label>
+                    <label for="firstName" th:text="#{firstNameLabel}">Imię:</label>
                     <input type="text" id="firstName" name="firstName" required placeholder="Wpisz imię"/>
                 </div>
                 <div class="form-group">
-                    <label for="lastName">Nazwisko:</label>
+                    <label for="lastName" th:text="#{lastNameLabel}">Nazwisko:</label>
                     <input type="text" id="lastName" name="lastName" required placeholder="Wpisz nazwisko"/>
                 </div>
                 <div class="form-group">
-                    <label for="image">Zdjęcie:</label>
+                    <label for="image" th:text="#{imageLabel}">Zdjęcie:</label>
                     <input type="file" id="image" name="image" accept="image/*" required/>
                 </div>
 
-                <button type="submit" class="btn-submit">Zapisz Pracownika</button>
+                <button type="submit" class="btn-submit" th:text="#{saveEmployeeButton}">Zapisz Pracownika</button>
             </form>
         </div>
     </div>
-
 </div>
 </body>
 </html>

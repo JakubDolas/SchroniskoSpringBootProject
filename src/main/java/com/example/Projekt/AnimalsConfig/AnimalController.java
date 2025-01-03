@@ -71,6 +71,19 @@ public class AnimalController {
         }
         return "redirect:/animals";
     }
+    @GetMapping("/deleteAnimal")
+    public String showDeleteAnimalPage(Model model) {
+        // Pobieranie wszystkich zwierząt do wyświetlenia na stronie
+        model.addAttribute("animalsPage", animalService.getPaginatedAnimals(PageRequest.of(0, 6)));
+        return "deleteAnimal";
+    }
+
+    @PostMapping("/deleteAnimal")
+    public String deleteAnimal(@RequestParam("id") Long id) {
+        // Usuwanie zwierzęcia na podstawie id
+        animalService.deleteAnimalById(id);
+        return "redirect:/deleteAnimal"; // Po usunięciu przekierowanie na stronę
+    }
 
 
 }

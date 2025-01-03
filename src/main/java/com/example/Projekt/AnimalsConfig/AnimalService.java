@@ -26,5 +26,9 @@ public class AnimalService {
     public Animal getAnimalById(Long id) {
         return animalRepository.findById(id).orElse(null);
     }
+    public void deleteAnimalById(Long id) {
+        animalRepository.deleteById(id);
+    }
+
 
 }

@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="container2">
-        <h1>Lista Pracowników</h1>
+        <h1 th:text="#{employeeList}">Lista Pracowników</h1>
         <div class="animal-grid">
             <div th:each="employee : ${employeesPage.content}" class="animal-card">
                 <a th:href="@{/employees/{id}(id=${employee.id})}">

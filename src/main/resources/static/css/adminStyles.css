@@ -113,7 +113,7 @@ body {
 }
 
 /* Przyciski */
-.add-animal-btn, .delete-animal-btn {
+.button {
     background-color: #b77952;
     color: white;
     padding: 12px 24px; /* Zmniejszenie paddingu */
@@ -125,7 +125,7 @@ body {
     display: inline-block; /* Aby przyciski były w jednej linii */
 }
 
-.add-animal-btn:hover, .delete-animal-btn:hover {
+.button:hover {
     background-color: #653b17;
     transform: scale(1.05);
 }
@@ -134,7 +134,7 @@ body {
 
 /* Responsywność: zmniejszenie rozmiaru przycisków na małych ekranach */
 @media (max-width: 768px) {
-    .add-animal-btn, .delete-animal-btn {
+    .button {
         padding: 10px 20px; /* Jeszcze mniejszy padding */
         font-size: 0.9rem; /* Zmniejszenie czcionki na małych ekranach */
     }
@@ -145,7 +145,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .add-animal-btn, .delete-animal-btn {
+    .button {
         padding: 8px 16px; /* Mniejsze przyciski na bardzo małych ekranach */
         font-size: 0.8rem; /* Dodatkowe zmniejszenie czcionki */
     }

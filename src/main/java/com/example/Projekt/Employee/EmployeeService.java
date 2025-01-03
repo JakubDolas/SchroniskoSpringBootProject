@@ -28,4 +28,8 @@ public class EmployeeService {
     public Employee getEmployeeById(Long id) {
         return employeeRepository.findById(id).orElse(null);
     }
+    public void deleteEmployeeById(Long id) {
+        employeeRepository.deleteById(id);
+    }
+
 }

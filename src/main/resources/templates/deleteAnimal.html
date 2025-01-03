@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/adminStyles.css">
+    <link rel="stylesheet" href="/css/deleteEmployeeStyles.css">
+    <title>Usuń Zwierzę</title>
 </head>
 <body>
 <div class="container">
@@ -15,7 +16,6 @@
             <a th:href="@{/animals}" id="animalsLink" th:text="#{animals}">Animals</a>
             <a th:href="@{/employees}" id="employeesLink" th:text="#{employees}">Employees</a>
             <a th:href="@{/admin}" id="adminLink" th:text="#{admin}">Admin</a>
-
 
             <div class="dupa">
                 <a th:href="@{/donate}" class="dupa-text" th:text="#{donate}">Donate</a>
@@ -32,18 +32,37 @@
                 <a th:href="@{/lang?lang=en}" th:text="#{lang.en}">EN</a>
             </div>
         </div>
-
     </div>
-    <div class="button-group">
-        <a href="/addAnimal" class="button" th:text="#{addAnimal}">Dodaj zwierzaka</a>
-        <a href="/deleteAnimal" class="button" th:text="#{deleteAnimal}">Usuń zwierzaka</a>
-        <a href="/addEmployee" class="button" th:text="#{addEmployee}">Dodaj Pracownika</a>
-        <a href="/deleteEmployee" class="button" th:text="#{deleteEmployee}">Usuń Pracownika</a>
+    <div class="container2">
+        <h1 th:text="#{deleteAnimalTitle}">Usuń Zwierzę</h1>
+        <form action="/deleteAnimal" method="post">
+            <table>
+                <thead>
+                <tr>
+                    <th th:text="#{select}">Wybierz</th>
+                    <th th:text="#{id}">ID</th>
+                    <th th:text="#{name}">Imię</th>
+                    <th th:text="#{description}">Opis</th>
+                    <th th:text="#{photo}">Zdjęcie</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="animal : ${animalsPage.content}">
+                    <td><input type="radio" name="id" th:value="${animal.id}"></td>
+                    <td th:text="${animal.id}"></td>
+                    <td th:text="${animal.name}"></td>
+                    <td th:text="${animal.description}"></td>
+                    <td>
+                        <img th:src="@{'/photos/' + ${animal.photo.id}}" alt="Animal Photo" width="100">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="submit" th:text="#{deleteSelectedButton}">Usuń wybrane zwierzę</button>
+        </form>
+        <br>
+        <a href="/animals" th:text="#{backToAnimals}">Powrót do listy zwierząt</a>
     </div>
-
 </div>
-
-
-
 </body>
 </html>

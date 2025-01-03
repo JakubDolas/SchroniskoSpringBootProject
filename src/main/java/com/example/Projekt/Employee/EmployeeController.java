@@ -60,4 +60,18 @@ public class EmployeeController {
         }
         return "redirect:/employees";
     }
+
+    @GetMapping("/deleteEmployee")
+    public String showDeleteEmployeePage(Model model) {
+        model.addAttribute("employees", employeeService.getAllEmployees());
+        return "deleteEmployee";
+    }
+
+    @PostMapping("/deleteEmployee")
+    public String deleteEmployee(@RequestParam("id") Long id) {
+        employeeService.deleteEmployeeById(id);
+        return "redirect:/deleteEmployee";
+    }
+
+
 }
