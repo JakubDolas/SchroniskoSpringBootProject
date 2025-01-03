@@ -59,6 +59,8 @@ public class HelloController {
     public String adminPage() {
         return "admin";
     }
+
+
     
     @GetMapping("/lang")
     public String changeLanguage(@RequestParam("lang") String lang, HttpServletRequest request, HttpServletResponse response) {

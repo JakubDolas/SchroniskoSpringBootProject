@@ -106,7 +106,8 @@ body {
 }
 
 /* Stylizacja dla siatki zwierząt */
-.animal-grid {
+/* Stylizacja dla siatki pracowników */
+.employee-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
     gap: 20px; /* Odstępy między elementami */
@@ -115,8 +116,8 @@ body {
     margin-top: 30px; /* Dodanie marginesu od góry */
 }
 
-/* Pozostałe style */
-.animal-card {
+/* Stylizacja karty pracownika */
+.employee-card {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     border-radius: 10px; /* Zaokrąglony rogami */
@@ -126,24 +127,24 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.animal-card:hover {
+.employee-card:hover {
     transform: translateY(-5px); /* Efekt unoszenia karty przy najechaniu */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Mocniejszy cień przy hover */
 }
 
-.animal-photo {
-    width: 100%; /* Dopasowanie do szerokości karty */
-    height: 300px; /* Wysokość zdjęcia */
-    object-fit: cover; /* Dopasowanie obrazu do kontenera */
-    border-radius: 8px; /* Zaokrąglone rogi */
-    margin-bottom: 15px;
-}
-
-.animal-card h3 {
+.employee-card h3 {
     font-size: 1.2rem;
     color: #333;
     margin-top: 10px;
 }
+
+.employee-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Stylizacja paginacji */
 .pagination {
     display: flex;               /* Układ Flexbox */
     justify-content: center;     /* Wyśrodkowanie na poziomie osi X */
@@ -152,59 +153,35 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Styl dla linków paginacji */
 .pagination a {
-    text-decoration: none;       /* Usunięcie podkreślenia */
-    background-color: #f4f4f4;   /* Jasnoszare tło */
-    color: #333;                 /* Ciemnoszary tekst */
-    padding: 8px 12px;           /* Wewnętrzny padding */
-    margin: 0 5px;               /* Odstępy między elementami */
-    border: 1px solid #ddd;      /* Obramowanie */
-    border-radius: 5px;          /* Zaokrąglenie rogów */
-    transition: background-color 0.3s; /* Efekt płynnej zmiany koloru */
+    text-decoration: none;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Styl dla aktywnego numeru strony */
 .pagination span {
-    background-color: #b77952;   /* Niebieskie tło */
-    color: white;                /* Biały tekst */
+    background-color: #b77952;
+    color: white;
     padding: 8px 12px;
     margin: 0 5px;
     border-radius: 5px;
     font-weight: bold;
 }
 
-/* Efekt hover dla linków paginacji */
 .pagination a:hover {
-    background-color: #653b17;   /* Niebieskie tło */
-    color: white;                /* Biały tekst */
+    background-color: #653b17;
+    color: white;
     border-color: #653b17;
 }
 
-/* Dostosowanie wyglądu dla przycisku Previous i Next */
-.pagination a[rel="prev"],
-.pagination a[rel="next"] {
-    font-weight: bold;
-    color: #555;
-}
-
-.container2 h1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 2.5em;
-    text-align: center;
-    color: #333;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    margin: 20px 0;
-}
-
-/* Odstępy dla mobilnych urządzeń */
 @media screen and (max-width: 768px) {
     .pagination a, .pagination span {
-        padding: 6px 8px;  /* Zmniejszenie paddingu */
-        margin: 0 3px;     /* Zmniejszenie odstępów */
+        padding: 6px 8px;
+        margin: 0 3px;
     }
 }

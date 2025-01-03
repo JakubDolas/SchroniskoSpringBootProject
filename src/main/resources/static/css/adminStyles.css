@@ -130,6 +130,8 @@ body {
     transform: scale(1.05);
 }
 
+
+
 /* Responsywność: zmniejszenie rozmiaru przycisków na małych ekranach */
 @media (max-width: 768px) {
     .add-animal-btn, .delete-animal-btn {
