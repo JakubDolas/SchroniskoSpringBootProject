@@ -6,131 +6,138 @@
 }
 
 body {
-    background: #f5efed;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4vw;
+}
+.logout-form {
+    display: inline-block;
+    margin-left: 1vw;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.logout-form button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.5vw 1vw;
+    font-size: 0.9vw;
+    font-weight: bold;
+    border-radius: 0.3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
+.logout-form button:hover {
+    background-color: #cc0000;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
+    background-color: #f0f0f0;
+    padding: 1vw 2vw;
+    color: #333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar span {
+    color: #3cb371;
 }
 
 .navbar h1 {
-    color: #423c3c;
-    font-size: 1.5vw;
-    font-weight: bold;
-    margin-right: 20px;
-    padding: 0;
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
 }
 
-
-.navbar .nav-links {
+.nav-links {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex: 1;
-    font-size: 0.8vw;
+    align-items: center;
 }
 
-.navbar .nav-links a {
+.nav-links a {
+    color: #222;
     text-decoration: none;
-    color: #333;
-    font-weight: 650;
-    line-height: 40px;
+    margin: 0 1vw;
+    font-size: 1.2vw;
+    font-weight: 550;
+    transition: color 0.3s ease;
 }
 
-.navbar .nav-links a:hover {
-    color: #b77952;
+.nav-links a:hover {
+    color: #3cb371;
 }
-.navbar span{
-    color: #b77952;
-}
+
 .language-switcher {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    margin-left: 2vw;
 }
 
-.lang-button {
-    background-color: #f1f1f1;
-    color: #333;
-    padding: 8px 12px;
+.language-switcher a {
+    color: #222;
     text-decoration: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
+    margin: 0 0.5vw;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 0.5vw 1vw;
+    border: 0.1vw solid #222;
+    border-radius: 0.5vw;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.lang-button:hover {
-    background-color: #ddd;
+.language-switcher a:hover {
+    background-color: #3cb371;
+    color: #fff;
 }
 
-.dupa {
-    border-radius: 10px;
-    background: #b77952;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    display: flex;
-    align-items: center;
-    height: 40px;
+.container2 {
+    width: 100%;
+    max-width: 90vw;
+    margin-top: 5vw; /* Zapewnia odpowiednią przestrzeń poniżej navbaru */
+    text-align: center;
 }
 
-.dupa:hover {
-    background: #653b17;
-    color: white;
-}
-
-.navbar .nav-links .dupa a {
-    color: white;
-}
-
-.login {
-    padding: 10px 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
-/* Styl nagłówka */
 .container2 h1 {
     font-family: 'Arial', sans-serif;
-    font-size: 2.5em;
+    font-size: 3vw;
     text-align: center;
     color: #2c3e50;
-    margin: 20px 0;
+    margin-bottom: 2vw;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.2vw;
 }
 
-/* Styl tabeli */
 table {
-    width: 100%;
+    width: 80vw;
+    max-width: 90vw;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 4vw auto; /* Większy margines, aby tabela była niżej */
     background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Dodanie cienia */
-    border-radius: 10px; /* Zaokrąglenia */
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.1);
+    border-radius: 0.8vw;
     overflow: hidden;
+    table-layout: fixed;
 }
 
 table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px 15px;
+    border: 0.1vw solid #ddd;
+    padding: 1vw 1.5vw;
     text-align: center;
     font-family: 'Arial', sans-serif;
+    word-wrap: break-word;
 }
 
 table th {
-    background-color: #3498db; /* Niebieskie tło nagłówka */
+    background-color: #3cb371;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -141,43 +148,80 @@ table td {
 }
 
 table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Kolor dla parzystych wierszy */
+    background-color: #f9f9f9;
 }
 
 table tr:hover {
-    background-color: #f2f2f2; /* Efekt podświetlenia wiersza */
+    background-color: #f2f2f2;
 }
 
-/* Styl przycisków */
 button {
     background-color: #e74c3c;
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 1.2vw 2.5vw;
     cursor: pointer;
-    font-size: 1em;
-    border-radius: 5px; /* Zaokrąglenie */
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
     transition: background-color 0.3s ease;
+    margin-top: 2vw; /* Zapewnia odstęp nad przyciskiem */
 }
 
 button:hover {
-    background-color: #c0392b; /* Ciemniejszy odcień przy najechaniu */
-    transform: scale(1.05); /* Lekkie powiększenie */
+    background-color: #c0392b;
+    transform: scale(1.05);
 }
 
-/* Styl linków */
 a {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 2vw;
     text-decoration: none;
     color: #3498db;
-    font-size: 1em;
+    font-size: 1.2vw;
     font-family: 'Arial', sans-serif;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #2c3e50; /* Zmiana koloru przy najechaniu */
+    color: #2c3e50;
     text-decoration: underline;
 }
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw 0;
+    font-family: Arial, sans-serif;
+}
 
+.pagination a {
+    text-decoration: none;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0.8vw 1.2vw;
+    margin: 0 0.5vw;
+    border: 0.1vw solid #ddd;
+    border-radius: 0.5vw;
+    transition: background-color 0.3s;
+}
+
+.pagination span {
+    background-color: #3cb371;
+    color: white;
+    padding: 0.8vw 1.2vw;
+    margin: 0 0.5vw;
+    border-radius: 0.5vw;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: #3cb371;
+    color: white;
+    border-color: #3cb371;
+}
+
+.pagination a[rel="prev"],
+.pagination a[rel="next"] {
+    font-weight: bold;
+    color: #555;
+}

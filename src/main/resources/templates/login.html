@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/loginStyles.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <h1 th:utext="#{logoText}">Home<span th:text="#{logoText2}">Pet</span></h1>
+        <div class="nav-links">
+            <a th:href="@{/home}" id="homeLink" th:text="#{home}">Home</a>
+            <a th:href="@{/about}" id="aboutLink" th:text="#{about}">About</a>
+            <a th:href="@{/adopt}" id="adoptLink" th:text="#{adopt}">Adopt</a>
+            <a th:href="@{/animals}" id="animalsLink" th:text="#{animals}">Animals</a>
+            <a th:href="@{/employees}" id="employeesLink" th:text="#{employees}">Employees</a>
+            <a th:href="@{/admin}" id="adminLink" th:text="#{admin}">Admin</a>
+            <div class="language-switcher">
+                <a th:href="@{/lang?lang=pl}" th:text="#{lang.pl}">PL</a>
+                <a th:href="@{/lang?lang=en}" th:text="#{lang.en}">EN</a>
+            </div>
+        </div>
+    </div>
+    <div class="login-container">
+        <div class="login-row">
+            <div class="login-card">
+                <div th:if="${param.error}" class="alert alert-error" th:text="#{error.invalid_credentials}">
+                    Invalid Email or Password
+                </div>
+                <div class="login-card-header">
+                    <h2 class="login-title" th:text="#{login.title}">Login Form</h2>
+                </div>
+                <div class="login-card-body">
+                    <form method="post" role="form" th:action="@{/login}" class="login-form">
+                        <div class="form-group">
+                            <label for="username" class="form-label" th:text="#{login.email}">Email</label>
+                            <input type="text" id="username" name="username" class="form-input" placeholder="Enter email address" th:placeholder="#{login.email.placeholder}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label" th:text="#{login.password}">Password</label>
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Enter password" th:placeholder="#{login.password.placeholder}"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn-submit" th:text="#{login.submit}">Submit</button>
+                            <span class="register-link" th:text="#{login.not_registered}">Not registered?</span>
+                            <a th:href="@{/register}" th:text="#{login.register}">Register/Signup here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

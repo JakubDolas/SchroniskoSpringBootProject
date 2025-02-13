@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 6vw;
+    padding-top: 2vw;
 }
 .logout-form {
     display: inline-block;
@@ -38,7 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #f0f0f0;
-    padding: 1vw 2vw;
+    padding: 1vw 1.5vw;
     color: #333;
     width: 100%;
     position: fixed;
@@ -54,7 +54,7 @@ body {
 }
 
 .navbar h1 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 700;
     margin: 0;
     color: #222;
@@ -68,8 +68,8 @@ body {
 .nav-links a {
     color: #222;
     text-decoration: none;
-    margin: 0 1vw;
-    font-size: 1.2vw;
+    margin: 0 0.8vw;
+    font-size: 1vw;
     font-weight: 550;
     transition: color 0.3s ease;
 }
@@ -79,18 +79,18 @@ body {
 }
 
 .language-switcher {
-    margin-left: 2vw;
+    margin-left: 1.5vw;
 }
 
 .language-switcher a {
     color: #222;
     text-decoration: none;
-    margin: 0 0.5vw;
-    font-size: 1vw;
+    margin: 0 0.4vw;
+    font-size: 0.9vw;
     font-weight: bold;
-    padding: 0.5vw 1vw;
-    border: 0.1vw solid #222;
-    border-radius: 0.5vw;
+    padding: 0.4vw 0.8vw;
+    border: 0.08vw solid #222;
+    border-radius: 0.4vw;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -98,31 +98,53 @@ body {
     background-color: #3cb371;
     color: #fff;
 }
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5vw;
+.content-container {
+    max-width: 60vw;
+    margin: 2.5vw auto;
+    background: white;
+    padding: 2vw;
+    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.1);
+    border-radius: 0.8vw;
 }
 
-.button-group {
-    display: flex;
-    gap: 2vw;
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2vw;
 }
 
-.button {
+.user-table th, .user-table td {
+    border: 0.1vw solid #ddd;
+    padding: 1vw;
+    text-align: left;
+}
+
+.user-table th {
     background-color: #3cb371;
     color: white;
-    padding: 1.5vw 3vw;
-    font-size: 1.5vw;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 0.4vw;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+    font-size: 1.2vw;
 }
 
-.button:hover {
-    background-color: #3aa56a;
-    transform: scale(1.05);
+.user-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 2vw;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 1vw;
+    }
+    .content-container {
+        max-width: 80vw;
+        padding: 3vw;
+    }
+    .user-table th, .user-table td {
+        padding: 2vw;
+        font-size: 1.8vw;
+    }
 }

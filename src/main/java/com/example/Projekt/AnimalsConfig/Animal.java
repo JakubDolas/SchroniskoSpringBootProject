@@ -1,6 +1,11 @@
 package com.example.Projekt.AnimalsConfig;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 
 @Entity
 public class Animal {
@@ -8,12 +13,21 @@ public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "{validation.animal.name.notBlank}")
+    @Size(min = 2, max = 10, message = "{validation.animal.name.size}")
     private String name;
+
+    @NotBlank(message = "{validation.animal.description.notBlank}")
+    @Size(min = 10, max = 255, message = "{validation.animal.description.size}")
     private String description;
 
-    @OneToOne(cascade = CascadeType.ALL)  // Relacja jeden-do-jednego z Photo
-    @JoinColumn(name = "photo_id") // Kolumna, która będzie przechowywać odniesienie do zdjęcia
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "photo_id")
     private Photo photo;
+
+    @CreationTimestamp
+    private LocalDateTime createdDate;
 
     public Animal() {}
 
@@ -23,7 +37,6 @@ public class Animal {
         this.photo = photo;
     }
 
-    // Gettery i Settery
     public Long getId() {
         return id;
     }
@@ -40,6 +53,14 @@ public class Animal {
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public Photo getPhoto() {
         return photo;
     }
@@ -48,10 +69,11 @@ public class Animal {
         this.photo = photo;
     }
 
-    public String getDescription() {
-        return description;
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
-    public void setDescription(String description) {
-        this.description = description;
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
     }
 }

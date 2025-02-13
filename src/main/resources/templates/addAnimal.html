@@ -17,13 +17,9 @@
             <a th:href="@{/animals}" id="animalsLink" th:text="#{animals}">Animals</a>
             <a th:href="@{/employees}" id="employeesLink" th:text="#{employees}">Employees</a>
             <a th:href="@{/admin}" id="adminLink" th:text="#{admin}">Admin</a>
-
-            <div class="dupa">
-                <a th:href="@{/donate}" class="dupa-text" th:text="#{donate}">Donate</a>
-            </div>
-            <div class="login">
-                <a th:href="@{/login}" class="login-text" th:text="#{login}">Log In</a>
-            </div>
+            <form th:action="@{/logout}" method="post" class="logout-form">
+                <button type="submit" th:text="#{logout}">Wyloguj</button>
+            </form>
             <div class="language-switcher">
                 <a th:href="@{/lang?lang=pl}" th:text="#{lang.pl}">PL</a>
                 <a th:href="@{/lang?lang=en}" th:text="#{lang.en}">EN</a>
@@ -33,15 +29,19 @@
     <div class="container2">
         <div class="form-container">
             <h2 th:text="#{addAnimalFormTitle}">Add Animal</h2>
-            <form th:action="@{/addAnimal}" method="post" enctype="multipart/form-data">
+            <form th:action="@{/addAnimal}" method="post" enctype="multipart/form-data" th:object="${animal}">
                 <div class="form-group">
                     <label for="name" th:text="#{nameLabel}">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter animal name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter animal name" th:field="*{name}" required>
+                    <span class="error-message" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="description" th:text="#{descriptionLabel}">Description:</label>
-                    <textarea id="description" name="description" placeholder="Enter animal description" required></textarea>
+                    <textarea id="description" name="description" placeholder="Enter animal description" th:field="*{description}" required></textarea>
+                    <span class="error-message" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
                 </div>
+
                 <div class="form-group">
                     <label for="image" th:text="#{imageLabel}">Image:</label>
                     <input type="file" id="image" name="image" accept="image/*" required>
@@ -51,7 +51,6 @@
             </form>
         </div>
     </div>
-
 </div>
 </body>
 </html>

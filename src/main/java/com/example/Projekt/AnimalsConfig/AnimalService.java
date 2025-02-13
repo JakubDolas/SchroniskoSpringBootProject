@@ -29,6 +29,4 @@ public class AnimalService {
     public void deleteAnimalById(Long id) {
         animalRepository.deleteById(id);
     }
-
-
 }

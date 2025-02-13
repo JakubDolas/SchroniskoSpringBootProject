@@ -6,33 +6,9 @@
 }
 
 body {
-    background: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding-top: 6vw;
-}
-.logout-form {
-    display: inline-block;
-    margin-left: 1vw;
+    background: #f3f3f3;
 }
 
-.logout-form button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 0.5vw 1vw;
-    font-size: 0.9vw;
-    font-weight: bold;
-    border-radius: 0.3vw;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.logout-form button:hover {
-    background-color: #cc0000;
-}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -98,31 +74,79 @@ body {
     background-color: #3cb371;
     color: #fff;
 }
-.button-container {
+.title {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding: 2.5vw 1vw;
+    background-color: #f8f9fa;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 1.5vw;
+    max-width: 80vw;
+    gap: 1.2vw;
+    background-color: #ffffff;
+    border-radius: 0.6vw;
+    box-shadow: 0 0.2vw 0.8vw rgba(0, 0, 0, 0.1);
+    padding: 1.2vw;
 }
 
-.button-group {
-    display: flex;
-    gap: 2vw;
+.box2 {
+    flex: 1;
+    padding: 1.2vw;
 }
 
-.button {
-    background-color: #3cb371;
-    color: white;
-    padding: 1.5vw 3vw;
-    font-size: 1.5vw;
+.box2 h1 {
+    font-size: 2.2vw;
     font-weight: bold;
-    text-decoration: none;
-    border-radius: 0.4vw;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+    color: #3cb371;
+    margin-bottom: 1vw;
 }
 
-.button:hover {
-    background-color: #3aa56a;
-    transform: scale(1.05);
+.box2 p {
+    font-size: 1.1vw;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1.2vw;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 30vw;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.6vw;
+    box-shadow: 0 0.2vw 0.8vw rgba(0, 0, 0, 0.2);
+    margin-top: 1vw;
+
+}
+
+.contact-info {
+    margin-top: 2vw;
+    padding: 1.2vw;
+    background-color: #f9f9f9;
+    border-radius: 0.6vw;
+    box-shadow: 0 0.2vw 0.6vw rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    text-align: center;
+    color: #3cb371;
+}
+
+.contact-info p {
+    font-size: 1.1vw;
+    line-height: 1.5;
+    margin: 0.8vw 0;
+}
+
+.contact-info strong {
+    font-weight: bold;
 }

@@ -18,7 +18,6 @@ public class EmployeePhoto {
         this.imageData = imageData;
     }
 
-    // Gettery i Settery
     public Long getId() {
         return id;
     }

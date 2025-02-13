@@ -13,7 +13,7 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    private final String recipientEmail = "jakubdolasinski699@gmail.com";
+    private final String recipientEmail = "exampleTO@gmail.com";
     private final String recipientSubject = "Wniosek o adopcję";
 
     public void sendHtmlEmail(String message) throws MessagingException {

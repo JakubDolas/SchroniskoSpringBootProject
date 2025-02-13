@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 1vw 2vw;
+    color: #333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar span {
+    color: #3cb371;
+}
+
+.navbar h1 {
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 1vw;
+    font-size: 1.2vw;
+    font-weight: 550;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3cb371;
+}
+
+.language-switcher {
+    margin-left: 2vw;
+}
+
+.language-switcher a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 0.5vw;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 0.5vw 1vw;
+    border: 0.1vw solid #222;
+    border-radius: 0.5vw;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-switcher a:hover {
+    background-color: #3cb371;
+    color: #fff;
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2vw;
+    margin-top: 5vw;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+.video-container {
+    flex: 1 1 50%;
+    min-width: 300px;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.text-container {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 45%;
+    margin-top: 3vw;
+}
+
+.text-container h2 {
+    font-size: 2.2vw;
+    margin-bottom: 1.5vw;
+}
+
+.text-container p {
+    font-size: 1.4vw;
+    margin-bottom: 2vw;
+}
+
+.button-container {
+    display: flex;
+    gap: 1vw;
+}
+
+.button-container .btn {
+    display: inline-block;
+    padding: 1vw 2vw;
+    background-color: #3cb371;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5vw;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-container .btn:hover {
+    background-color: #2e8b57;
+}
+
+.animals-list {
+    text-align: center;
+    margin: 3vw auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animals-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2vw;
+    justify-items: center;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 2vw;
+}
+
+.animal-item {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 2vw;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animal-item img {
+    width: 12vw;
+    height: 12vw;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.animal-item img:hover {
+    transform: scale(1.05);
+}
+
+.animal-item h4 {
+    font-size: 1.6vw;
+    margin-top: 1vw;
+    font-weight: bold;
+    color: #333;
+}
+
+h3 {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    color: #333;
+    font-weight: bold;
+}
+
+.button-container2 {
+    display: flex;
+    gap: 1vw;
+    margin: 8px auto 0;
+}
+
+.button-container2 .btn {
+    display: inline-block;
+    padding: 1vw 2vw;
+    background-color: #3cb371;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5vw;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-container2 .btn:hover {
+    background-color: #2e8b57;
+}
+
+@media (max-width: 1200px) {
+    .animals-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .animal-item img {
+        width: 14vw;
+        height: 14vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .animals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .animal-item img {
+        width: 16vw;
+        height: 16vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .animal-item img {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .animals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .animal-item img {
+        width: 30vw;
+        height: 30vw;
+    }
+}

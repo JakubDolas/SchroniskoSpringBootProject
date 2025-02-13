@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/adoptStyles.css">
@@ -15,13 +15,9 @@
             <a th:href="@{/animals}" id="animalsLink" th:text="#{animals}">Animals</a>
             <a th:href="@{/employees}" id="employeesLink" th:text="#{employees}">Employees</a>
             <a th:href="@{/admin}" id="adminLink" th:text="#{admin}">Admin</a>
-
-            <div class="dupa">
-                <a th:href="@{/donate}" class="dupa-text" th:text="#{donate}">Donate</a>
-            </div>
-            <div class="login">
-                <a th:href="@{/login}" class="login-text" th:text="#{login}">Log In</a>
-            </div>
+            <form th:action="@{/logout}" method="post" class="logout-form">
+                <button type="submit" th:text="#{logout}">Wyloguj</button>
+            </form>
             <div class="language-switcher">
                 <a th:href="@{/lang?lang=pl}" th:text="#{lang.pl}">PL</a>
                 <a th:href="@{/lang?lang=en}" th:text="#{lang.en}">EN</a>

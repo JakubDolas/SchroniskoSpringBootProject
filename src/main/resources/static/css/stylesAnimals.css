@@ -6,182 +6,147 @@
 }
 
 body {
-    background: #f5efed;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    background: #f3f3f3;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 0;
+    background-color: #f0f0f0;
+    padding: 1vw 2vw;
+    color: #333;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar span {
+    color: #3cb371;
 }
 
 .navbar h1 {
-    color: #423c3c;
-    font-size: 1.5vw;
-    font-weight: bold;
-    margin-right: 20px;
-    padding: 0;
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
 }
 
-
-.navbar .nav-links {
+.nav-links {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex: 1;
-    font-size: 0.8vw;
+    align-items: center;
 }
 
-.navbar .nav-links a {
+.nav-links a {
+    color: #222;
     text-decoration: none;
-    color: #333;
-    font-weight: 650;
-    line-height: 40px;
+    margin: 0 1vw;
+    font-size: 1.2vw;
+    font-weight: 550;
+    transition: color 0.3s ease;
 }
 
-.navbar .nav-links a:hover {
-    color: #b77952;
+.nav-links a:hover {
+    color: #3cb371;
 }
-.navbar span{
-    color: #b77952;
-}
+
 .language-switcher {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    margin-left: 2vw;
 }
 
-.lang-button {
-    background-color: #f1f1f1;
-    color: #333;
-    padding: 8px 12px;
+.language-switcher a {
+    color: #222;
     text-decoration: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
+    margin: 0 0.5vw;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 0.5vw 1vw;
+    border: 0.1vw solid #222;
+    border-radius: 0.5vw;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.lang-button:hover {
-    background-color: #ddd;
+.language-switcher a:hover {
+    background-color: #3cb371;
+    color: #fff;
 }
 
-.dupa {
-    border-radius: 10px;
-    background: #b77952;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
-
-.dupa:hover {
-    background: #653b17;
-    color: white;
-}
-
-.navbar .nav-links .dupa a {
-    color: white;
-}
-
-.login {
-    padding: 10px 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    height: 40px;
-}
-
-.active {
-    border-bottom: 2px solid #b77952;
-}
-
-/* Stylizacja dla siatki zwierząt */
 .animal-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolumny */
-    gap: 20px; /* Odstępy między elementami */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
     width: 100%;
-    max-width: 1200px;
-    margin-top: 30px; /* Dodanie marginesu od góry */
+    max-width: 80vw;
+    margin: 2vw auto;
 }
 
-/* Pozostałe style */
 .animal-card {
     background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Zaokrąglony rogami */
-    padding: 20px;
+    border: 0.1vw solid #ddd;
+    border-radius: 1vw;
+    padding: 2vw;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .animal-card:hover {
-    transform: translateY(-5px); /* Efekt unoszenia karty przy najechaniu */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Mocniejszy cień przy hover */
+    transform: translateY(-0.5vw);
+    box-shadow: 0 0.8vw 2vw rgba(0, 0, 0, 0.2);
 }
 
 .animal-photo {
-    width: 100%; /* Dopasowanie do szerokości karty */
-    height: 300px; /* Wysokość zdjęcia */
-    object-fit: cover; /* Dopasowanie obrazu do kontenera */
-    border-radius: 8px; /* Zaokrąglone rogi */
-    margin-bottom: 15px;
+    width: 100%;
+    height: 16vw;
+    object-fit: cover;
+    border-radius: 0.8vw;
+    margin-bottom: 1.5vw;
 }
 
 .animal-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     color: #333;
-    margin-top: 10px;
+    margin-top: 1vw;
 }
+
 .pagination {
-    display: flex;               /* Układ Flexbox */
-    justify-content: center;     /* Wyśrodkowanie na poziomie osi X */
-    align-items: center;         /* Wyśrodkowanie na osi Y */
-    margin: 20px 0;              /* Odstęp od góry i dołu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw 0;
     font-family: Arial, sans-serif;
 }
 
-/* Styl dla linków paginacji */
 .pagination a {
-    text-decoration: none;       /* Usunięcie podkreślenia */
-    background-color: #f4f4f4;   /* Jasnoszare tło */
-    color: #333;                 /* Ciemnoszary tekst */
-    padding: 8px 12px;           /* Wewnętrzny padding */
-    margin: 0 5px;               /* Odstępy między elementami */
-    border: 1px solid #ddd;      /* Obramowanie */
-    border-radius: 5px;          /* Zaokrąglenie rogów */
-    transition: background-color 0.3s; /* Efekt płynnej zmiany koloru */
+    text-decoration: none;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0.8vw 1.2vw;
+    margin: 0 0.5vw;
+    border: 0.1vw solid #ddd;
+    border-radius: 0.5vw;
+    transition: background-color 0.3s;
 }
 
-/* Styl dla aktywnego numeru strony */
 .pagination span {
-    background-color: #b77952;   /* Niebieskie tło */
-    color: white;                /* Biały tekst */
-    padding: 8px 12px;
-    margin: 0 5px;
-    border-radius: 5px;
+    background-color: #3cb371;
+    color: white;
+    padding: 0.8vw 1.2vw;
+    margin: 0 0.5vw;
+    border-radius: 0.5vw;
     font-weight: bold;
 }
 
-/* Efekt hover dla linków paginacji */
 .pagination a:hover {
-    background-color: #653b17;   /* Niebieskie tło */
-    color: white;                /* Biały tekst */
-    border-color: #653b17;
+    background-color: #3cb371;
+    color: white;
+    border-color: #3cb371;
 }
 
-/* Dostosowanie wyglądu dla przycisku Previous i Next */
 .pagination a[rel="prev"],
 .pagination a[rel="next"] {
     font-weight: bold;
@@ -190,21 +155,86 @@ body {
 
 .container2 h1 {
     font-family: 'Arial', sans-serif;
-    font-size: 2.5em;
+    font-size: 3vw;
     text-align: center;
     color: #333;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    margin: 20px 0;
+    text-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.2);
+    padding: 1vw;
+    margin: 2vw 0;
 }
 
-/* Odstępy dla mobilnych urządzeń */
-@media screen and (max-width: 768px) {
-    .pagination a, .pagination span {
-        padding: 6px 8px;  /* Zmniejszenie paddingu */
-        margin: 0 3px;     /* Zmniejszenie odstępów */
+.sorting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5vw 1vw;
+    background-color: #f9f9f9;
+    border-radius: 0.5vw;
+    margin: 4vw auto;
+    box-shadow: 0 0.4vw 0.6vw rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    max-width: 60vw;
+}
+
+.sorting form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    align-items: center;
+}
+
+.sorting label {
+    font-size: 1vw;
+    font-weight: bold;
+    color: #333;
+    margin-right: 0.5vw;
+}
+
+.sorting select {
+    padding: 0.5vw;
+    font-size: 1vw;
+    color: #333;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.4vw;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.sorting select:hover,
+.sorting select:focus {
+    border-color: #3cb371;
+    outline: none;
+}
+
+.sorting button {
+    padding: 0.6vw 1.2vw;
+    font-size: 1vw;
+    color: #fff;
+    background-color: #3cb371;
+    border: none;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sorting button:hover {
+    background-color: #3cb371;
+}
+
+@media (max-width: 768px) {
+    .sorting {
+        flex-direction: column;
+        gap: 1vw;
+    }
+
+    .sorting form {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
+
+

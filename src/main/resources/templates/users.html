@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pl"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/adminStyles.css">
+    <title>System Rejestracji i Logowania</title>
+    <link rel="stylesheet" href="/css/userStyles.css">
+
 </head>
 <body>
 <div class="container">
@@ -24,18 +27,24 @@
             </div>
         </div>
     </div>
-    <div class="button-container">
-        <div class="button-group">
-            <a href="/addAnimal" class="button" th:text="#{addAnimal}">Dodaj zwierzaka</a>
-            <a href="/deleteAnimal" class="button" th:text="#{deleteAnimal}">Usuń zwierzaka</a>
-        </div>
-        <div class="button-group">
-            <a href="/addEmployee" class="button" th:text="#{addEmployee}">Dodaj pracownika</a>
-            <a href="/deleteEmployee" class="button" th:text="#{deleteEmployee}">Usuń pracownika</a>
-        </div>
-        <div class="button-group">
-            <a href="/users" class="button" th:text="#{viewUsers}">Zobacz użytkowników</a>
-        </div>
+    <div class="content-container">
+        <h1 th:text="#{user.list}">Lista Zarejestrowanych Użytkowników</h1>
+        <table class="user-table">
+            <thead>
+            <tr>
+                <th th:text="#{firstName}">Imię</th>
+                <th th:text="#{lastName}">Nazwisko</th>
+                <th th:text="#{login.email}">Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.firstName}"></td>
+                <td th:text="${user.lastName}"></td>
+                <td th:text="${user.email}"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 </body>

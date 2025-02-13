@@ -9,7 +9,7 @@ public class Photo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Lob  // Aby przechowywać dane binarne obrazu
+    @Lob
     private byte[] imageData;
 
     public Photo() {}
@@ -18,7 +18,6 @@ public class Photo {
         this.imageData = imageData;
     }
 
-    // Gettery i Settery
     public Long getId() {
         return id;
     }
